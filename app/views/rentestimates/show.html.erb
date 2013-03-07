@@ -1,0 +1,25 @@
+<h2 id="notice"><%= notice %></h2>
+
+<p>
+  <b>Industry:</b>
+  <%= @rentestimate.industry %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @rentestimate.location %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @rentestimate.size %>
+</p>
+
+<p>
+  <b>Rent:</b>
+  <%= @rentestimate.rent %>
+</p>
+
+
+<%= link_to 'Edit', edit_rentestimate_path(@rentestimate) %> |
+<%= link_to 'Back', rentestimates_path %>

@@ -1,14 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ShareOffice2</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="Tradewinz facilitates sharing and renting office space between Quickbooks small business owners. We help Quickbooks users with extra office space to make more $$$ by renting out their excess office space and equipments to other Quickbooks verified small business owners who are looking to save money on office rentals.">
+
+   <meta name="keywords" content="Tradewinz, Tradewinz office space, co-working, shared office, small business office,
+   rent exchange share sublet sublease office desk chair computer internet phone"/>
+
+   <meta name="author" content="Intuit Labs">
+
+  <title>Sharing Office Space by and for Quickbooks Small Business Owners</title>
+
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<div class = "container">
+	<div class="row" style="height: 60px; margin-right: -20px;">
+    <div class="span12">
+            <ul class="nav nav-pills pull-right">
+                <li><%= link_to "Home", "#" %></li>
+                <li><%= link_to "Listings", "#" %> </li>
+                <li><%= link_to "List Your Office", "#"%> </li>
+                <li><%= link_to "How It Works", "#" %></li>
+                <li><%= link_to "About", "#" %> </li>
+            </ul>
+            <a href="#">
+                <h3 class="muted" style="margin-top: 12px;">
+                  <%= image_tag("logo.png", alt: "tradewinz logo") %>
+                </h3>
+            </a>
+    </div>
+  </div> 
+
+  <%= yield %>
+
+	<!--div class="footer">
+      <p>&copy; Intuit, Inc. All rights reserved
+        <a href="http://security.intuit.com/privacy/">Privacy Policy</a>
+      </p>
+
+	</div-->
+
+  <div class="row" style="border-top: 4px solid #fabb0f; margin-right: -20px;">
+    <div class="span12" style="margin-bottom: 30px; padding-top: 24px;">
+      <p>© Intuit, Inc. All rights reserved
+        <a href="http://security.intuit.com/privacy/">Privacy Policy</a>
+      </p>
+    </div>
+  </div>
+
+
+
+</div>
+
+<!-- begin Google Analytics code -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-39056569-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- end GA code -->
+
+<!-- begin SnapEngage code -->
+<script type="text/javascript">
+    (function() {
+        var se = document.createElement('script'); se.type = 'text/javascript'; se.async = true;
+        se.src = '//commondatastorage.googleapis.com/code.snapengage.com/js/c441023c-0525-4d13-bf03-eaaaedc44080.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(se, s);
+    })();
+</script>
+<!-- end SnapEngage code -->
+
+<!-- jQquery validation -->
+<script type="text/javascript">
+    $("#saveListingBtn").click(function() {
+        $("#new_office").validate({
+            rules: {
+                "office[contact_email]": {required: true, email: true},
+                "office[title]": {required: true}
+            },
+            messages: {
+                "office[contact_email]": "Please provide a valid email",
+                "office[title]": "Please provide a title for your listing"
+            },
+            errorPlacement: function(error, element) {
+                element.after(error);
+                element.css('border', 'solid red 2px');
+            }
+        });
+        _gaq.push(['_trackEvent', 'SaveListing', 'User saves a listing']);
+    });
+
+    $("#newListingBtn").click(function() {
+        _gaq.push(['_trackEvent', 'NewListing', 'User clicks on Add Listing']);
+    });
+
+    $("#seeListingBtn").click(function() {
+        _gaq.push(['_trackEvent', 'SeeListings', 'User clicks on See Listing']);
+    });
+
+</script>
+
 
 </body>
+
+
 </html>
