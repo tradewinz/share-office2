@@ -31,15 +31,13 @@
 	<div class="row" style="height: 60px; margin-right: -20px;">
     <div class="span12">
             <ul class="nav nav-pills pull-right">
-                <li><%= link_to "Home", "#" %></li>
-                <li><%= link_to "Listings", "#" %> </li>
-                <li><%= link_to "List Your Office", "#"%> </li>
-                <li><%= link_to "How It Works", "#" %></li>
-                <li><%= link_to "About", "#" %> </li>
+                <li><%= link_to "Rent Calculator", home_path %></li>
+               	<li><%= link_to "How It Works", help_path %></li>
+                <li><%= link_to "About", about_path %> </li>
             </ul>
-            <a href="#">
+            <a href="/home">
                 <h3 class="muted" style="margin-top: 12px;">
-                  <%= image_tag("logo.png", alt: "tradewinz logo") %>
+                  <%= image_tag("tradewinz_logo.png", alt: "tradewinz logo") %>
                 </h3>
             </a>
     </div>

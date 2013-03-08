@@ -1,0 +1,85 @@
+<%= form_for(@rentestimate) do |f| %>
+	
+	<div class ="row">
+
+	<!-- TODO: Replace generenated CRUD Error Handling -->
+		<% if @rentestimate.errors.any? %>
+		    <div id="error_explanation">
+		      	<h2>
+		      		<%= pluralize(@rentestimate.errors.count, "error") %> prohibited this rentestimate from being saved:
+		      	</h2>
+
+		     	<ul>
+		     		<% @rentestimate.errors.full_messages.each do |msg| %>
+		        		<li><%= msg %></li>
+		      		<% end %>
+		     	</ul>
+		    </div>
+		<% end %>
+	</div>
+
+	<div class="row">
+		<div class="span6">
+      		<%= image_tag("office.png", class: "img-polaroid", alt: "office rental") %>
+    	</div>
+
+		<div class ="span6">
+
+			<!-- Form -->
+			<div class="well panel-border">
+				<!-- Header -->
+				<div class="panel-header-gray">
+			    	<h3> Estimate Rent </h3>
+			        	<p>Your office is an asset you can turn into cash.  Tell us about your space, and we’ll tell you how much it’s worth:
+			      		</p>
+			    </div>
+			    
+			    <fieldset class="padtop">
+
+			        <div class="control-group">
+			        	<label class="control-label"> 
+			        		<strong>Industry</strong>
+			        	</label>
+			            <div class="controls"> 
+			            	<%= f.text_field :industry %> 
+			            </div>
+			        </div>
+
+
+			        <div class="control-group">
+			        	<label class="control-label"> 
+			        		<strong>Zipcode</strong>  
+			        	</label>
+			            <div class="controls"> 
+			            	<%= f.text_field :location %>
+			            </div>
+			        </div>
+
+			        <div class="control-group">
+			        	<label class="control-label"> 
+			        		Extra space 
+			        	</label>
+			            <div class="controls"> 
+			            	<%= f.text_field :size %>  sq. ft.
+			            </div>
+			        </div>
+
+				</fieldset>
+
+				<div class="panel-header-gray">
+			        <div class="row">
+			            <div class="span6 jumbotron">		      
+			                <button class="btn btn-large btn-primary" type="submit" id="saveListingBtn">Get Estimate</button>
+			            </div>
+			        </div>
+			    </div>
+
+			</div> <!-- end form-->
+	
+		</div> <!-- end span -->
+	
+	</div> <!-- end row-->
+
+
+
+<% end %>
