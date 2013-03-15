@@ -1,31 +1,31 @@
-<h1>Listing rentestimates</h1>
+<div class="container">
+    <table>
+      <tr>
+        <th>Industry</th>
+        <th>Location</th>
+        <th>Email</th>
+        <th>Size</th>
+        <th>Rent</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
 
-<table>
-  <tr>
-    <th>Industry</th>
-    <th>Location</th>
-    <th>Email</th>
-    <th>Size</th>
-    <th>Rent</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+        <% @rentestimates.each do |rentestimate| %>
+          <tr>
+            <td><%= rentestimate.industry %></td>
+            <td><%= rentestimate.location %></td>
+            <td><%= rentestimate.email %></td>
+            <td><%= rentestimate.size %></td>
+            <td><%= rentestimate.rent %></td>
+            <td><%= link_to 'Show', rentestimate %></td>
+            <td><%= link_to 'Edit', edit_rentestimate_path(rentestimate) %></td>
+            <td><%= link_to 'Destroy', rentestimate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        
+    </table>
 
-<% @rentestimates.each do |rentestimate| %>
-  <tr>
-    <td><%= rentestimate.industry %></td>
-    <td><%= rentestimate.location %></td>
-    <td><%= rentestimate.email %></td>
-    <td><%= rentestimate.size %></td>
-    <td><%= rentestimate.rent %></td>
-    <td><%= link_to 'Show', rentestimate %></td>
-    <td><%= link_to 'Edit', edit_rentestimate_path(rentestimate) %></td>
-    <td><%= link_to 'Destroy', rentestimate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+    <br>
 
-<br />
-
-<%= link_to 'New Rent Estimate', new_rentestimate_path %>
+<div>

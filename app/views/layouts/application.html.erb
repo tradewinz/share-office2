@@ -10,7 +10,7 @@
 
   <meta name="author" content="Intuit Labs">
 
-  <title>Share Office Space - by and for Quickbooks Small Business Owners</title>
+  <title>Office Space Zestimate - for Quickbooks Small Business Owners</title>
 
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
@@ -28,27 +28,24 @@
 
 <body>
 
-<div class = "container">
-  <div class="row" style="height: 80px; margin-right: -20px;">
-    <div class="span12">
-        <a href="/home">
-            <h3 class="muted" style="margin-top: 12px;">
-               <img src="https://intuit.intuitbrainstorm.com/Files/Tenant_1/ImageUploads/Person_5672/634659541715185553/Profile/Logo_Labs_Horiz.jpg" width="250">
-            </h3>
-        </a>
+<div class="container-fluid">
+  <div class="container">
+    <a href="/home">    
+      <img src="https://s3-us-west-2.amazonaws.com/officespace/Logo_Labs_Horiz.jpg" alt:"intuit labs logo" width="200px"> 
+    </a>
   </div>
-  </div> 
 
   <%= yield %>
-
-  <br>
-  <div class="row" style="border-top: 4px solid #fabb0f; margin-right: -20px;">
-    <div class="span12" style="margin-bottom: 30px; padding-top: 24px;">
-      <p>&copy; Intuit, Inc. All rights reserved
-        <a href="http://security.intuit.com/privacy/">Privacy Policy</a>
-      </p>
-    </div>
+  
+  <div class="container">
+    <div class="footer" style="background-color: #eeeeee;text-align:center;height:30px;padding-top:5px;">  
+        <p>&copy; Intuit, Inc. All rights reserved
+          <a href="http://security.intuit.com/privacy/">Privacy Policy</a>
+        </p>
+    </div>        
   </div>
+
+</div>
 
 <!-- begin Google Analytics code -->
 <script type="text/javascript">

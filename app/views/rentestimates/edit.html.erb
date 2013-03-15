@@ -1,8 +1,6 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
-
-  
+<html>  
 
   <head>
 
@@ -16,79 +14,44 @@
 
     <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
 
-    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
-
-    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css"> 
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css"> 
 
   </head>
-
   
 
   <body>
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="container">
-      <br>
-        <div id="rentModal">
-          <div class="modal-header">          
-            <h3 id="rentModalLabel">Office Space Rental Guide</h3>
-          </div>
-            <div class="modal-body">
-              <p>Find below the average rentals in different metro areas:</p>
-              <table class="table table-striped">
-                <thead>
-                <tr>
-                  <th>New York</th>
-                  <th>Los Angeles</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>$35 - $45 sq.ft./year</td>
-                  <td>$45 - $60 sq.ft./year</td>
-                </tr>
-                </tbody>
-              </table>
-              <table class="table table-striped">
-                <thead>
-                <tr>
-                  <th>Chicago</th>
-                  <th>San Francisco</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>$55 - $65 sq.ft./year</td>
-                  <td>$35 - $45 sq.ft./year</td>
-                </tr>
-                </tbody>
-              </table>              
-            </div>
-          </div>
 
-        
-            <p>Provide us with your email address and we''ll email you a custom quote!</p>
+        <div class="hero-unit" style="background-color:white;border-style:solid;border-width:2px;border-color: #eeeeee;">
 
-            <p></p>
+          <h2>Thank you for your interest!</h2>
+
+          <p>We are working hard to finish this service. We've learned that you can
+
+            earn up to a 30% premium on rent for your unused work space. Enter your
+
+            email address below and we'll stay in touch with you to let you know when
+
+            our service is ready.</p>
 
             <%= form_for(@rentestimate) do |f| %>
       
-              <!--%= f.text_field :industry -->              
-              <input type="text" name="rentestimate[email]" placeholder="Email address" class="input-large" style="height: 34px;">
-
-              <button class="btn btn-inverse btn-large" type="submit">Send me a custom quote</button>
+              <div class="pull-left form-horizontal" style="margin-right:10px;">
+                  <!--%= f.text_field :industry -->              
+                  <input type="email" name="rentestimate[email]" placeholder="Email address" class="input-xlarge" style="height: 34px;">
+                  <button class="btn btn-primary btn-large" type="submit">Stay in touch</button>
+              </div>
 
             <% end %>
-
-            <p></p>
-
-          </div>
 
         </div>
 
       </div>
 
+      
 
     </div>
 
@@ -96,5 +59,6 @@
 
 
 </html>
+
 
 <!--%= render 'form' %-->
