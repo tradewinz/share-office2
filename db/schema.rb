@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130307162712) do
+ActiveRecord::Schema.define(:version => 20130314001452) do
 
   create_table "rentestimates", :force => true do |t|
     t.string   "industry"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20130307162712) do
     t.string   "rent"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "email"
   end
 
 end

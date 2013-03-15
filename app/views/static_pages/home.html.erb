@@ -1,2 +1,71 @@
+<!DOCTYPE html>
 
-<%= render 'form' %>
+<html>
+
+  
+
+  <head>
+
+    <script src="https://app.divshot.com/js/jquery.min.js"></script>
+
+    <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
+
+    <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css">
+
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css"> 
+
+  </head>
+
+  
+
+  <body>
+
+    <div class="container">
+
+      <div class="container">
+
+
+        <div class="container" style="background-image: url(http://www.advicecaster.com/assets/bg_photo_hands_1400x700-af03f9150882990f757aecf817eadcb3.jpg);min-height:700px">
+
+          <div class="hero-unit" style="margin-top:100px;margin-left:100px;margin-right:100px;filter: alpha(opacity=80);-moz-opacity:.80;opacity:.80">
+
+            <h2>See what your extra office space is worth</h2>
+
+            <p>Tell us about your space, and we'll tell you how much it's worth.</p>
+
+            <p></p>
+
+            <%= form_for(@rentestimate) do |f| %>
+      
+              <!--%= f.text_field :industry --> 
+              <input type="text" name="rentestimate[industry]" placeholder="Your Industry" class="input-large" style="height: 34px;">
+
+              <input type="text" name="rentestimate[location]" placeholder="Zip code" class="input-large" style="height: 34px;">
+
+              <button class="btn btn-inverse btn-large" type="submit">Get Estimate</button>
+
+            <% end %>
+
+            <p></p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </body>
+
+
+</html>
+
+<!--%= render 'form' %-->

@@ -44,8 +44,8 @@ class RentestimatesController < ApplicationController
 
     respond_to do |format|
       if @rentestimate.save
-        format.html { redirect_to @rentestimate, notice: 'Rentestimate was successfully created.' }
-        format.json { render json: @rentestimate, status: :created, location: @rentestimate }
+        format.html { redirect_to edit_rentestimate_path(@rentestimate), notice: 'Net Worth Estimate - Part 1 created.' }
+        format.json { render json: @rentestimate, status: :created, location: edit_rentestimate_path(@rentestimate) }
       else
         format.html { render action: "new" }
         format.json { render json: @rentestimate.errors, status: :unprocessable_entity }
@@ -60,7 +60,7 @@ class RentestimatesController < ApplicationController
 
     respond_to do |format|
       if @rentestimate.update_attributes(params[:rentestimate])
-        format.html { redirect_to @rentestimate, notice: 'Rentestimate was successfully updated.' }
+        format.html { redirect_to @rentestimate, notice: 'Net Worth Estimate - Part 2 was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
