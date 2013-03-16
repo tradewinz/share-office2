@@ -3,19 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tradewinz facilitates sharing and renting office space between Quickbooks small business owners. We help Quickbooks users with extra office space to make more $$$ by renting out their excess office space and equipments to other Quickbooks verified small business owners who are looking to save money on office rentals.">
+  <meta name="description" content="Tradewinz facilitates sharing of office space between Quickbooks small business owners. We help Quickbooks users with extra office space to make more $$$ by renting out their unused office space and equipments to other Quickbooks verified small business owners, who are looking to save money on office and equipment rentals.">
 
-  <meta name="keywords" content="Tradewinz, Tradewinz office space, co-working, shared office, small business office,
-  rent exchange share sublet sublease office desk chair computer internet phone"/>
+  <meta name="keywords" content="Tradewinz, Tradewinz office space, co-working, shared office, small business office, rent exchange share sublet sublease office desk chair computer internet phone printer"/>
 
   <meta name="author" content="Intuit Labs">
 
-  <title>Office Space Zestimate - for Quickbooks Small Business Owners</title>
+  <title>Office Space Qestimate - for Quickbooks Small Business Owners</title>
 
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
 
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
@@ -29,9 +28,9 @@
 <body>
 
 <div class="container-fluid">
-  <div class="container">
+   <div class="container" style="height: 60px; border-bottom: 1px solid #efefef;">
     <a href="/home">    
-      <img src="https://s3-us-west-2.amazonaws.com/officespace/Logo_Labs_Horiz.jpg" alt:"intuit labs logo" width="200px"> 
+      <%= image_tag("Logo_Labs_Horiz.jpg", alt: "Intuit Labs Logo", width: "200px", style: "margin-top:10px" ) %>      
     </a>
   </div>
 

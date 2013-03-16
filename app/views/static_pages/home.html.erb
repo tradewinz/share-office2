@@ -31,19 +31,17 @@
 
         <div class="row">
 
-          <div class="span6">
-
-            <img src="https://s3-us-west-2.amazonaws.com/officespace/floorplan.png"> 
-
+          <div class="span5">
+            <%= image_tag("floorplan.png", alt: "Unused Office image") %>
           </div>
 
-          <div class="span6">
+          <div class="span4">
 
-            <div class="hero-unit">
+            <div class="hero-unit" style="padding: 40px; background-color:#3679BD; color: #ffffff; font-family: Trebuchet MS">
 
-              <h2>See what your extra work space is worth</h2>
+              <p style="font-size: 30px">See what your extra work space is worth</p>
 
-              <p>Tell us about your space, and we'll tell you how much it's worth.</p>
+              <p style="font-size: 17px">Tell us about your space, and we'll tell you how much it's worth.</p>
 
               <%= form_for(@rentestimate) do |f| %>
                 
@@ -52,7 +50,7 @@
 
                 <input type="text" name="rentestimate[location]" placeholder="Zip code" class="input-large" style="height: 34px;"/>
                 <br>
-                <button class="btn btn-primary btn-large" type="submit">Get Estimate</button>
+                <button class="btn btn-warning btn-large" style="width: 225px; color:#000000" type="submit">Get Estimate</button>
 
               <% end %>
 

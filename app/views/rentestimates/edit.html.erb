@@ -25,27 +25,29 @@
 
       <div class="container">
 
-        <div class="hero-unit" style="background-color:white;border-style:solid;border-width:2px;border-color: #eeeeee;">
+        <div class="hero-unit" style="background-color:white; border-style:solid; border-width:2px; border-color: #eeeeee; font-family: Trebuchet MS;">
 
           <h2>Thank you for your interest!</h2>
 
-          <p>We are working hard to finish this service. We've learned that you can
+          <p style="color: #505050;">
+            We are working hard to finish this service. We've learned that you can
 
             earn up to a 30% premium on rent for your unused work space. Enter your
 
             email address below and we'll stay in touch with you to let you know when
 
-            our service is ready.</p>
+            our service is ready.
+          </p>
 
-            <%= form_for(@rentestimate) do |f| %>
+          <%= form_for(@rentestimate) do |f| %>
       
-              <div class="pull-left form-horizontal" style="margin-right:10px;">
-                  <!--%= f.text_field :industry -->              
-                  <input type="email" name="rentestimate[email]" placeholder="Email address" class="input-xlarge" style="height: 34px;">
-                  <button class="btn btn-primary btn-large" type="submit">Stay in touch</button>
-              </div>
+            <div class="pull-left form-horizontal" style="margin-right:10px;">
+                <!--%= f.text_field :industry -->              
+                <input type="email" name="rentestimate[email]" placeholder="Email address" class="input-xlarge" style="height: 34px;">
+                <button class="btn btn-primary btn-large" type="submit">Stay in touch</button>
+            </div>
 
-            <% end %>
+          <% end %>
 
         </div>
 
