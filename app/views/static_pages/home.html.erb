@@ -19,9 +19,28 @@
               <%= form_for(@rentestimate) do |f| %>
                 
                 <!--%= f.text_field :industry --> 
-                <input type="text" name="rentestimate[industry]" placeholder="Your Industry" class="input-large" style="height: 34px;"/>
+                <select id="businessType" name="rentestimate[industry]">                  
+                        <option class="ghostText" value="">Select Your Industry</option>
+                        <option value="1">Accounting, Bookkeeping  </option>
+                        <option value="2">Advertising, Public Relations </option>
+                        <option value="3">Construction, Contracting </option>
+                        <option value="4">Consulting/Professional Services  </option>
+                        <option value="5">Design, Architecture, Engineering </option>
+                        <option value="6">Food and Accommodation services (e.g., restaurant, hotels, etc.)  </option>
+                        <option value="7">Law Firm, Legal Services  </option>
+                        <option value="8">Manufacturing </option>
+                        <option value="9">Medical, Dental, Health Services  </option>
+                        <option value="10">Nonprofit </option>
+                        <option value="11">Personal services (e.g., spa, hair salons, auto repair, landscaping, etc.)  </option>
+                        <option value="12">Property Management </option>
+                        <option value="13">Retail Store  </option>
+                        <option value="14">Wholesale, Distribution </option>
+                        <option value="15">Other Industry</option>
+                </select>                    
 
-                <input type="text" name="rentestimate[location]" placeholder="Zip code" class="input-large" style="height: 34px;"/>
+                <!--input type="text" name="rentestimate[industry]" placeholder="Other Industry Name" class="input-large" style="height: 34px;"/-->
+
+                <input type="text" name="rentestimate[location]" placeholder="Zip code" class="input-large" />
                 <br>
                 <button class="btn btn-warning btn-large" style="width: 225px; color:#000000" type="submit">Get Estimate</button>
 
