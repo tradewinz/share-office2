@@ -20,7 +20,9 @@
       <%= form_for(@rentestimate) do |f| %>
   
         <div class="pull-left form-horizontal" style="margin-right:10px;">
-            <!--%= f.text_field :industry -->              
+            <!--%= f.file_field :image %>                          
+            <input type="file" name="rentestimate[image]">
+            <br-->
             <input type="email" name="rentestimate[email]" placeholder="Email address" class="input-xlarge" style="height: 34px;">
             <button class="btn btn-primary btn-large" type="submit">Stay in touch</button>
             <span style="font-size: 14px; color: #999999">   We promise we won't sell your address </span>

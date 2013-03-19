@@ -2,55 +2,53 @@
 
       <div class="container">
 
-        <div class="row">
-
-          <div class="span5">
-            <%= image_tag("floorplan.png", alt: "Unused Office image") %>
+          <div class="span4">
+            <%= image_tag("floorplan_373x287.png", alt: "Unused Office image") %>
           </div>
 
-          <div class="span4">
+          <div class="span6">
 
             <div class="hero-unit" style="padding: 40px; background-color:#3679BD; color: #ffffff; font-family: Trebuchet MS">
 
-              <p style="font-size: 30px">See what your extra work space is worth</p>
+              <!--p style="font-size: 30px"></p-->
+              <h2>Find out how much your extra space is worth</h2>
 
-              <p style="font-size: 17px">Tell us about your space, and we'll tell you how much it's worth.</p>
+              <!--p style="font-size: 17px">Tell us about your space, and we'll tell you how much it's worth.</p-->
+              <br>
 
               <%= form_for(@rentestimate) do |f| %>
                 
                 <!--%= f.text_field :industry --> 
                 <select id="businessType" name="rentestimate[industry]">                  
                         <option class="ghostText" value="">Select Your Industry</option>
-                        <option value="1">Accounting, Bookkeeping  </option>
-                        <option value="2">Advertising, Public Relations </option>
-                        <option value="3">Construction, Contracting </option>
-                        <option value="4">Consulting/Professional Services  </option>
-                        <option value="5">Design, Architecture, Engineering </option>
-                        <option value="6">Food and Accommodation services (e.g., restaurant, hotels, etc.)  </option>
-                        <option value="7">Law Firm, Legal Services  </option>
-                        <option value="8">Manufacturing </option>
-                        <option value="9">Medical, Dental, Health Services  </option>
-                        <option value="10">Nonprofit </option>
-                        <option value="11">Personal services (e.g., spa, hair salons, auto repair, landscaping, etc.)  </option>
-                        <option value="12">Property Management </option>
-                        <option value="13">Retail Store  </option>
-                        <option value="14">Wholesale, Distribution </option>
-                        <option value="15">Other Industry</option>
+                        <option value="Accounting">Accounting, Bookkeeping  </option>
+                        <option value="Advertising">Advertising, Public Relations </option>
+                        <option value="Construction">Construction, Contracting </option>
+                        <option value="Professional Services">Consulting/Professional Services  </option>
+                        <option value="Architecture and Engineering">Design, Architecture, Engineering </option>
+                        <option value="Food Services">Food and Accommodation services ( restaurant, hotels, etc.)  </option>
+                        <option value="Legal Services">Law Firm, Legal Services  </option>
+                        <option value="Manufacturing">Manufacturing </option>
+                        <option value="Health Services">Medical, Dental, Health Services  </option>
+                        <option value="Nonprofit">Nonprofit </option>
+                        <option value="Personal Services">Personal services (spa, hair salons, auto repair, landscaping, etc.)  </option>
+                        <option value="Property">Property Management </option>
+                        <option value="Retail">Retail Store  </option>
+                        <option value="Wholesale">Wholesale, Distribution </option>
+                        <option value="Other">Other Industry</option>
                 </select>                    
 
                 <!--input type="text" name="rentestimate[industry]" placeholder="Other Industry Name" class="input-large" style="height: 34px;"/-->
-
+                <br>
                 <input type="text" name="rentestimate[location]" placeholder="Zip code" class="input-large" />
                 <br>
-                <button class="btn btn-warning btn-large" style="width: 225px; color:#000000" type="submit">Get Estimate</button>
+                <button class="btn btn-warning btn-large" style="color:#000000" type="submit">Get Estimate</button>
 
               <% end %>
 
             </div>
 
           </div>
-
-        </div>
 
       </div>
       
