@@ -44,7 +44,7 @@ class RentestimatesController < ApplicationController
 
     respond_to do |format|
       if @rentestimate.save
-        format.html { redirect_to edit_rentestimate_path(@rentestimate), notice: 'Net Worth Estimate - Part 1 created.' }
+        format.html { redirect_to edit_rentestimate_path(@rentestimate), notice: 'Qestimate - created.' }
         format.json { render json: @rentestimate, status: :created, location: edit_rentestimate_path(@rentestimate) }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class RentestimatesController < ApplicationController
 
     respond_to do |format|
       if @rentestimate.update_attributes(params[:rentestimate])
-        format.html { redirect_to @rentestimate, notice: 'Net Worth Estimate - Part 2 was successfully updated.' }
+        format.html { redirect_to @rentestimate, notice: 'Qestimate - updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

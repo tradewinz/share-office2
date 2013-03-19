@@ -68,33 +68,28 @@
 
 <!-- end GA code -->
 
-
 <!-- jQquery validation -->
 <script type="text/javascript">
-    $("#saveListingBtn").click(function() {
-        $("#new_office").validate({
+    $("#getEstimateBtn").click(function() {
+        $("#new_rentestimate").validate({
             rules: {
-                "office[contact_email]": {required: true, email: true},
-                "office[title]": {required: true}
+                "rentestimate[location]": {required: true},
+                "rentestimate[industry]": {required: true}
             },
             messages: {
-                "office[contact_email]": "Please provide a valid email",
-                "office[title]": "Please provide a title for your listing"
+                "rentestimate[location]": "Please enter the zipcode of your business",
+                "rentestimate[industry]": "Please select an industry from the dropdown"
             },
             errorPlacement: function(error, element) {
                 element.after(error);
                 element.css('border', 'solid red 2px');
             }
         });
-        _gaq.push(['_trackEvent', 'SaveListing', 'User saves a listing']);
+        _gaq.push(['_trackEvent', 'GetEstimate', 'User clicked Get Estimate']);
     });
 
-    $("#newListingBtn").click(function() {
-        _gaq.push(['_trackEvent', 'NewListing', 'User clicks on Add Listing']);
-    });
-
-    $("#seeListingBtn").click(function() {
-        _gaq.push(['_trackEvent', 'SeeListings', 'User clicks on See Listing']);
+    $("#contactMeBtn").click(function() {
+        _gaq.push(['_trackEvent', 'ContactMe', 'User clicked Contact Me']);
     });
 
 </script>
