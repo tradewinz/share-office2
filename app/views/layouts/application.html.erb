@@ -20,10 +20,6 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <script src="https://app.divshot.com/js/jquery.min.js"></script>
-
-  <script src="https://app.divshot.com/js/bootstrap.min.js"></script>
-
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
 
   <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css"> 
@@ -41,7 +37,7 @@
 
   <%= yield %>
   
-  <div class="container">
+  <div class="container-fluid">
     <div class="footer" style="background-color: #eeeeee;text-align:center;height:30px;padding-top:5px;">  
         <p>&copy; Intuit, Inc. All rights reserved
           <a href="http://security.intuit.com/privacy/">Privacy Policy</a>
@@ -70,7 +66,8 @@
 
 <!-- jQquery validation -->
 <script type="text/javascript">
-    $("#getEstimateBtn").click(function() {
+    $("#getEstimateBtn").click(
+      function() {
         $("#new_rentestimate").validate({
             rules: {
                 "rentestimate[location]": {required: true},
@@ -84,13 +81,17 @@
                 element.after(error);
                 element.css('border', 'solid red 2px');
             }
-        });
-        _gaq.push(['_trackEvent', 'GetEstimate', 'User clicked Get Estimate']);
+        }
+      );
+        
+      _gaq.push(['_trackEvent', 'GetEstimate', 'User clicked Get Estimate']);
     });
 
-    $("#contactMeBtn").click(function() {
+    $("#contactMeBtn").click(
+      function() {
         _gaq.push(['_trackEvent', 'ContactMe', 'User clicked Contact Me']);
-    });
+      }
+    );
 
 </script>
 
