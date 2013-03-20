@@ -2,16 +2,16 @@
 
       <div class="container">
 
-          <div class="span4">
-            <%= image_tag("floorplan_373x287.png", alt: "Unused Office image") %>
+          <div class="span4 offset1">
+            <%= image_tag("floorplan_373x287.png", alt: "Unused Office image", style: "margin-top:20px") %>
           </div>
 
-          <div class="span6">
+          <div class="span5">
 
-            <div class="hero-unit" style="padding: 40px; background-color:#3679BD; color: #ffffff; font-family: Trebuchet MS">
+            <div class="hero-unit" style="padding: 20px 40px 40px; background-color:#3679BD; color: #ffffff; font-family: Trebuchet MS">
 
               <!--p style="font-size: 30px"></p-->
-              <h2>Find out how much your extra space is worth</h2>
+              <h2>Tell me how much rent I'll get for my space</h2>
 
               <!--p style="font-size: 17px">Tell us about your space, and we'll tell you how much it's worth.</p-->
               <br>
@@ -19,7 +19,7 @@
               <%= form_for(@rentestimate) do |f| %>
                 
                 <!--%= f.text_field :industry --> 
-                <select id="businessType" name="rentestimate[industry]">                  
+                <select id="businessType" name="rentestimate[industry]" style="margin-bottom: 15px;">                  
                         <option class="ghostText" value="">Select Your Industry</option>
                         <option value="Accounting">Accounting, Bookkeeping  </option>
                         <option value="Advertising">Advertising, Public Relations </option>
@@ -39,10 +39,10 @@
                 </select>                    
 
                 <!--input type="text" name="rentestimate[industry]" placeholder="Other Industry Name" class="input-large" style="height: 34px;"/-->
+                <input type="text" name="rentestimate[location]" placeholder="Zip Code" class="input-large" style="margin-bottom: 20px;"/>
                 <br>
-                <input type="text" name="rentestimate[location]" class="input-large" />
-                <br>
-                <button class="btn btn-warning btn-large btn-call-to-action" style="color:#000000" type="submit" id="getEstimateBtn">Get Estimate</button>
+
+                <button class="btn btn-primary btn-large" style="color:#222222; background:#faa732; font-family: Trebuchet MS" type="submit" id="getEstimateBtn">Get Estimate</button>
 
               <% end %>
 

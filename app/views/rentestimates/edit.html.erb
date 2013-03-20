@@ -1,40 +1,39 @@
-
-  <div class="container">
-
-    <div class="hero-unit" style="background-color:white; border-style:solid; border-width:2px; border-color: #eeeeee; font-family: Trebuchet MS; padding-bottom: 10px;">
+<div class="container">
+  
+  <div class="hero-unit" style="background-color:white; border-style:solid; border-width:2px; border-color: #eeeeee; font-family: Trebuchet MS; padding-bottom: 10px;">
 
       <p style="font-size:20px; color: #333333;"> 
         <strong>
-          You can earn an average* of $5000 in annual income by renting your unused office space. The market rate can be up to 50% higher than the price you pay per square foot.
+          You can earn an average* of $5000 in annual income by renting your unused space. The market rate can be up to 50% higher than the price you pay per square foot.
         </strong> 
       </p>
+      
       <p style="font-size:16px; color: #505050;">
         Intuit Labs is developing a solution for our small business community to share space. Intuit will identify and verify trusted connections. No Fees. Our goal is to support local small businesses.
         <br>
         <br>
-        Interested ? Lets keep in touch. We'll update our progress and invite you to participate in the Beta.
+        Interested? Let's keep in touch. We'll update you on our progress and invite you to participate in the Beta.
         <br>
 
       </p>
 
       <%= form_for(@rentestimate) do |f| %>
   
-        <div class="pull-left form-horizontal" style="margin-right:10px;">
+        <div class="form-horizontal" style="margin-right:10px;">
             <!--input type="file" name="rentestimate[image]"-->
-            <input type="email" name="rentestimate[email]" placeholder="Email address" class="input-xlarge" style="height: 34px;">
-            <button class="btn btn-primary btn-large" type="submit" id="contactMeBtn">
-              Stay in touch
-            </button><br>
+            <input type="email" name="rentestimate[email]" placeholder="Email address" style="height: 34px; width: 300px; margin-bottom: 10px;">
+            <button class="btn btn-primary btn-large" type="submit" id="contactMeBtn" style="margin-top: 0px; margin-right: 0px; margin-bottom: 10px; font-family: Trebuchet MS;">
+              Submit
+            </button>
+            <br>
             <span style="font-size: 14px; color: #999999">  We promise we won't sell your address </span>
             <br>
         </div>
 
       <% end %>
     
-    <p style="font-size:12px; color: #505050; margin-top: 100px">
-      <br>
-      <br>
-      * Average is based on shared office space of 150 square feet. Actual rent will vary based on factors such as location, amenities, and equipment.
+    <p style="font-size:12px; color: #505050; margin-top: 80px; line-height: 15px">
+      * Average assumes that a 150 sq. ft. office is rented in a "shared" office (more than one business sharing space). Actual rent will vary based on factors such as location, amenities, and equipment.
     </p>
 
   </div>
