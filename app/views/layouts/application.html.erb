@@ -70,8 +70,39 @@
 
 <!-- jQquery validation -->
 <script type="text/javascript">
-    $("#getEstimateBtn").click(
-      function() {
+    
+    $(function() {
+      var input = document.createElement("input");
+        if(('placeholder' in input)==false) { 
+          $('[placeholder]').focus(function() {
+              var i = $(this);
+              if(i.val() == i.attr('placeholder')) {
+                i.val('').removeClass('placeholder');
+                if(i.hasClass('password')) {
+                  i.removeClass('password');
+                  this.type='password';
+                }     
+            }
+        }).blur(function() {
+          var i = $(this);  
+          if(i.val() == '' || i.val() == i.attr('placeholder')) {
+            if(this.type=='password') {
+              i.addClass('password');
+              this.type='text';
+            }
+            i.addClass('placeholder').val(i.attr('placeholder'));
+          }
+        }).blur().parents('form').submit(function() {
+          $(this).find('[placeholder]').each(function() {
+            var i = $(this);
+            if(i.val() == i.attr('placeholder'))
+              i.val('');
+          })
+        });
+      }
+    });
+
+    $("#getEstimateBtn").click(function() {
         $("#new_rentestimate").validate({
             rules: {
                 "rentestimate[location]": {required: true},
@@ -85,17 +116,28 @@
                 element.after(error);
                 element.css('border', 'solid red 2px');
             }
-        }
-      );
+        });
         
-      _gaq.push(['_trackEvent', 'GetEstimate', 'User clicked Get Estimate']);
+        _gaq.push(['_trackEvent', 'GetEstimate', 'User clicked Get Estimate']);
+
     });
 
-    $("#contactMeBtn").click(
-      function() {
-        _gaq.push(['_trackEvent', 'ContactMe', 'User clicked Contact Me']);
-      }
-    );
+    $("#contactMeBtn").click(function() {
+      $("#edit_rentestimate*").validate({
+            rules: {
+                "rentestimate[email]": {required: true, email: true},
+            },
+            messages: {
+                "rentestimate[email]": "Please enter your contact email address",
+            },
+            errorPlacement: function(error, element) {
+                element.after(error);
+                element.css('border', 'solid red 2px');
+            }
+        });
+
+      _gaq.push(['_trackEvent', 'ContactMe', 'User clicked Contact Me']);
+    });
 
 </script>
 
