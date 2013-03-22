@@ -20,9 +20,6 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap.css">
-
-  <link rel="stylesheet" href="https://app.divshot.com/css/bootstrap-responsive.css"> 
 
 </head>
 
@@ -101,6 +98,14 @@
         });
       }
     });
+
+    //$('#subType').hide();
+
+    $('#businessType').change(function() {
+      ($(this).val() == "Other") ? $('#subType').show() : $('#subType').hide();
+      //$('#subType').slideDown('fast') : $('#subType').hide();
+    });
+
 
     $("#getEstimateBtn").click(function() {
         $("#new_rentestimate").validate({

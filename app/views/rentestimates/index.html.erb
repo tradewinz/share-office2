@@ -2,6 +2,7 @@
     <table>
       <tr>
         <th>Industry</th>
+        <th>Other Industry</th>
         <th>Location</th>
         <th>Email</th>
         <th>Size</th>
@@ -14,6 +15,7 @@
         <% @rentestimates.each do |rentestimate| %>
           <tr>
             <td><%= rentestimate.industry %></td>
+            <td><%= rentestimate.subindustry %></td>
             <td><%= rentestimate.location %></td>
             <td><%= rentestimate.email %></td>
             <td><%= rentestimate.size %></td>

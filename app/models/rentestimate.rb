@@ -1,5 +1,5 @@
 class Rentestimate < ActiveRecord::Base
-  attr_accessible :industry, :location, :rent, :size, :image, :email
+  attr_accessible :industry, :subindustry, :location, :rent, :size, :image, :email
   
   mount_uploader :image, ImageUploader
   
