@@ -98,8 +98,7 @@
         });
       }
     });
-
-    //$('#subType').hide();
+    
 
     $('#businessType').change(function() {
       ($(this).val() == "Other") ? $('#subType').show() : $('#subType').hide();
@@ -116,31 +115,22 @@
             messages: {
                 "rentestimate[location]": "Please enter the zipcode of your business",
                 "rentestimate[industry]": "Please select an industry from the dropdown"
-            },
+            },            
             errorPlacement: function(error, element) {
                 element.after(error);
                 element.css('border', 'solid red 2px');
             }
+
         });
         
-        _gaq.push(['_trackEvent', 'GetEstimate', 'User clicked Get Estimate']);
+        if ($("#new_rentestimate").valid()) {
+          //alert("valid");
+          _gaq.push(['_trackEvent', 'GetEstimate', 'User clicked Get Estimate']);
+        };
 
     });
 
     $("#contactMeBtn").click(function() {
-      $("#edit_rentestimate*").validate({
-            rules: {
-                "rentestimate[email]": {required: true, email: true},
-            },
-            messages: {
-                "rentestimate[email]": "Please enter your contact email address",
-            },
-            errorPlacement: function(error, element) {
-                element.after(error);
-                element.css('border', 'solid red 2px');
-            }
-        });
-
       _gaq.push(['_trackEvent', 'ContactMe', 'User clicked Contact Me']);
     });
 
