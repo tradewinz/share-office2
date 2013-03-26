@@ -12,6 +12,10 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :trackingId %><br />
+    <%= f.text_field :trackingId %>
+  </div>
+  <div class="field">
     <%= f.label :industry %><br />
     <%= f.text_field :industry %>
   </div>
@@ -31,6 +35,8 @@
     <%= f.label :rent %><br />
     <%= f.text_field :rent %>
   </div>
+
+
   <div class="actions">
     <%= f.submit "Submit Email" %>
   </div>

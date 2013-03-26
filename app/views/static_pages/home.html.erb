@@ -36,8 +36,8 @@
                         <option value="Retail">Retail Store  </option>
                         <option value="Wholesale">Wholesale, Distribution </option>
                         <option value="Other">Other Industry</option>
-                </select>                    
-
+                </select>                 
+                              
                 <input id="subType" type="text" name="rentestimate[subindustry]" placeholder="Specify your Industry" class="input-large" style="height: 20px; display: none"/>
                 <br>
                 <input type="text" name="rentestimate[location]" placeholder="Zip Code" class="input-large" style="margin-bottom: 20px;"/>
@@ -45,6 +45,8 @@
 
                 <button class="btn btn-primary btn-large" style="color:#222222; background:#faa732; font-family: Trebuchet MS" type="submit" id="getEstimateBtn">Get Estimate</button>
 
+                <div> <%= f.hidden_field :trackingId %> </div>
+                
               <% end %>
 
             </div>

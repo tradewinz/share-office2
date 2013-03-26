@@ -1,6 +1,7 @@
 <div class="container">
     <table>
       <tr>
+        <th>Tracking ID</th>
         <th>Industry</th>
         <th>Other Industry</th>
         <th>Location</th>
@@ -14,6 +15,7 @@
 
         <% @rentestimates.each do |rentestimate| %>
           <tr>
+            <td><%= rentestimate.trackingId %></td>
             <td><%= rentestimate.industry %></td>
             <td><%= rentestimate.subindustry %></td>
             <td><%= rentestimate.location %></td>
@@ -22,7 +24,7 @@
             <td><%= rentestimate.rent %></td>
             <td><%= link_to 'Show', rentestimate %></td>
             <td><%= link_to 'Edit', edit_rentestimate_path(rentestimate) %></td>
-            <td><%= link_to 'Destroy', rentestimate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <!--td><%= link_to 'Destroy', rentestimate, method: :delete, data: { confirm: 'Are you sure?' } %></td-->
           </tr>
         <% end %>
         
