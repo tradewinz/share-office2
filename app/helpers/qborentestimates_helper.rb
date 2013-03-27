@@ -1,0 +1,2 @@
+module QborentestimatesHelper
+end

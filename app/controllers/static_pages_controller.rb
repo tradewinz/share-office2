@@ -12,6 +12,19 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def qbohome
+    @qborentestimate = Qborentestimate.new
+
+    if params[:em]
+      @qborentestimate[:trackingId] = params[:em]
+    end
+
+    respond_to do |format|
+      format.html # qbohome.html.erb
+      format.json { render json: @qborentestimate }
+    end
+  end
+
   def about
   end
 

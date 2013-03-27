@@ -1,11 +1,14 @@
 ShareOffice2::Application.routes.draw do
 
+  resources :qborentestimates
+
+
   resources :rentestimates
 
 
   match '/home', to: 'static_pages#home'
 
-  match '/help', to: 'static_pages#help'
+  match '/qbohome', to: 'static_pages#qbohome'
 
   match '/about', to:'static_pages#about'
 

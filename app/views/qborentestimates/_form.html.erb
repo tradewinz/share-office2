@@ -1,10 +1,10 @@
-<%= form_for(@rentestimate) do |f| %>
-  <% if @rentestimate.errors.any? %>
+<%= form_for(@qborentestimate) do |f| %>
+  <% if @qborentestimate.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@rentestimate.errors.count, "error") %> prohibited this rentestimate from being saved:</h2>
+      <h2><%= pluralize(@qborentestimate.errors.count, "error") %> prohibited this qborentestimate from being saved:</h2>
 
       <ul>
-      <% @rentestimate.errors.full_messages.each do |msg| %>
+      <% @qborentestimate.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -16,12 +16,12 @@
     <%= f.text_field :trackingId %>
   </div>
 
-  <div class="field">
+    <div class="field">
     <%= f.label :industry %><br />
     <%= f.text_field :industry %>
   </div>
 
-  <div class="field">
+    <div class="field">
     <%= f.label :subindustry %><br />
     <%= f.text_field :subindustry %>
   </div>
@@ -40,7 +40,6 @@
     <%= f.label :size %><br />
     <%= f.text_field :size %>
   </div>
-
   <div class="field">
     <%= f.label :rent %><br />
     <%= f.text_field :rent %>

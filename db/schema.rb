@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130325233617) do
+ActiveRecord::Schema.define(:version => 20130326232620) do
+
+  create_table "qborentestimates", :force => true do |t|
+    t.string   "industry"
+    t.string   "location"
+    t.string   "size"
+    t.string   "rent"
+    t.string   "email"
+    t.string   "image"
+    t.string   "subindustry"
+    t.string   "trackingId"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "rentestimates", :force => true do |t|
     t.string   "industry"

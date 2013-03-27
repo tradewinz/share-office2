@@ -1,0 +1,29 @@
+<table>
+  <tr>
+    <th>Trackingid</th>
+    <th>Industry</th>
+    <th>Subindustry</th>
+    <th>Location</th>
+    <th>Email</th>
+    <th>Size</th>
+    <th>Rent</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @qborentestimates.each do |qborentestimate| %>
+  <tr>
+    <td><%= qborentestimate.trackingId %></td>
+    <td><%= qborentestimate.industry %></td>
+    <td><%= qborentestimate.subindustry %></td>
+    <td><%= qborentestimate.location %></td>
+    <td><%= qborentestimate.email %></td>
+    <td><%= qborentestimate.size %></td>
+    <td><%= qborentestimate.rent %></td>
+    <td><%= link_to 'Show', qborentestimate %></td>
+    <td><%= link_to 'Edit', edit_qborentestimate_path(qborentestimate) %></td>
+    <td><%= link_to 'Destroy', qborentestimate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>

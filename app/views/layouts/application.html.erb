@@ -28,9 +28,7 @@
 <div class="container-fluid">
    <div class="container" style="height: 60px; border-bottom: 1px solid #efefef;">
       <div class="span4 offset1">
-        <a href="/home">    
-          <%= image_tag("Logo_Labs_Horiz.jpg", alt: "Intuit Labs Logo", style: "width: 160px; margin-top:10px" ) %>            
-        </a>
+        <%= image_tag("Logo_Labs_Horiz.jpg", alt: "Intuit Labs Logo", style: "width: 160px; margin-top:10px" ) %>
     </div>
   </div>
 
@@ -52,7 +50,7 @@
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-39433943-1']);
+  _gaq.push(['_setAccount', 'UA-39056569-1']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -105,6 +103,9 @@
       //$('#subType').slideDown('fast') : $('#subType').hide();
     });
 
+    $('#qbobusinessType').change(function() {
+        ($(this).val() == "Other") ? $('#qbosubType').show() : $('#qbosubType').hide();
+    });
 
     $("#getEstimateBtn").click(function() {
         $("#new_rentestimate").validate({
@@ -113,8 +114,8 @@
                 "rentestimate[industry]": {required: true}
             },
             messages: {
-                "rentestimate[location]": "Please enter the zipcode of your business",
-                "rentestimate[industry]": "Please select an industry from the dropdown"
+                "rentestimate[location]": "Please enter the zip code of your business",
+                "rentestimate[industry]": "Please select an industry from the drop down"
             },            
             errorPlacement: function(error, element) {
                 element.after(error);
@@ -130,8 +131,36 @@
 
     });
 
+    $("#qbogetEstimateBtn").click(function() {
+        $("#new_qborentestimate").validate({
+            rules: {
+                "qborentestimate[location]": {required: true},
+                "qborentestimate[industry]": {required: true}
+            },
+            messages: {
+                "qborentestimate[location]": "Please enter the zip code of your business",
+                "qborentestimate[industry]": "Please select an industry from the drop down"
+            },
+            errorPlacement: function(error, element) {
+                element.after(error);
+                element.css('border', 'solid red 2px');
+            }
+
+        });
+
+        if ($("#new_qborentestimate").valid()) {
+            //alert("valid");
+            _gaq.push(['_trackEvent', 'QboGetEstimate', 'QBO User clicked Get Estimate']);
+        };
+
+    });
+
     $("#contactMeBtn").click(function() {
       _gaq.push(['_trackEvent', 'ContactMe', 'User clicked Contact Me']);
+    });
+
+    $("#qbocontactMeBtn").click(function() {
+        _gaq.push(['_trackEvent', 'QboContactMe', 'QBO User clicked Contact Me']);
     });
 
 </script>

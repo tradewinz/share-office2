@@ -1,0 +1,59 @@
+    <div class="container-fluid">      
+
+      <div class="container">
+
+          <div class="span4 offset1">
+            <%= image_tag("floorplan_373x287.png", alt: "Unused Office image", style: "margin-top:20px") %>
+          </div>
+
+          <div class="span5">
+
+            <div class="hero-unit" style="padding: 20px 40px 40px; background-color:#3679BD; color: #ffffff; font-family: Trebuchet MS">
+
+              <!--p style="font-size: 30px"></p-->
+              <h2>Tell me how much rent I'll get for my space</h2>
+
+              <!--p style="font-size: 17px">Tell us about your space, and we'll tell you how much it's worth.</p-->
+              <br>
+
+              <%= form_for(@qborentestimate) do |f| %>
+                
+                <!--%= f.text_field :industry --> 
+                <select id="qbobusinessType" name="qborentestimate[industry]" style="margin-bottom: 15px;">
+                        <option class="ghostText" value="">Select Your Industry</option>
+                        <option value="Accounting">Accounting, Bookkeeping  </option>
+                        <option value="Advertising">Advertising, Public Relations </option>
+                        <option value="Construction">Construction, Contracting </option>
+                        <option value="Professional Services">Consulting/Professional Services  </option>
+                        <option value="Architecture and Engineering">Design, Architecture, Engineering </option>
+                        <option value="Food Services">Food and Accommodation services ( restaurant, hotels, etc.)  </option>
+                        <option value="Legal Services">Law Firm, Legal Services  </option>
+                        <option value="Manufacturing">Manufacturing </option>
+                        <option value="Health Services">Medical, Dental, Health Services  </option>
+                        <option value="Nonprofit">Nonprofit </option>
+                        <option value="Personal Services">Personal services (spa, hair salons, auto repair, landscaping, etc.)  </option>
+                        <option value="Property">Property Management </option>
+                        <option value="Retail">Retail Store  </option>
+                        <option value="Wholesale">Wholesale, Distribution </option>
+                        <option value="Other">Other Industry</option>
+                </select>                 
+                              
+                <input id="qbosubType" type="text" name="qborentestimate[subindustry]" placeholder="Specify your Industry" class="input-large" style="height: 20px; display: none"/>
+                <br>
+                <input type="text" name="qborentestimate[location]" placeholder="Zip Code" class="input-large" style="margin-bottom: 20px;"/>
+                <br>
+
+                <button class="btn btn-primary btn-large" style="color:#222222; background:#faa732; font-family: Trebuchet MS" type="submit" id="qbogetEstimateBtn">Get Estimate</button>
+
+                <div style="display: none"> <%= f.text_field :trackingId %> </div>
+
+              <% end %>
+
+            </div>
+
+          </div>
+
+      </div>
+      
+    </div>
+<!--%= render 'form' %-->

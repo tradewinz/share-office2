@@ -1,0 +1,53 @@
+<div class="container">
+
+  <div class="hero-unit" style="background-color:white; border-style:solid; border-width:2px; border-color: #eeeeee; font-family: Trebuchet MS; padding-bottom: 10px;">
+
+    <p style="font-size:20px; color: #333333;">
+      <strong>
+        You can earn an average* of $5000 in annual income by renting your unused space.
+      </strong>
+    </p>
+
+    <p style="font-size:16px; color: #505050;">
+      The market rate can be up to 50% higher than the price you pay per square foot.
+    </p>
+    <p style="font-size:16px; color: #505050;">
+      Intuit Labs is developing a solution for our small business community to share space. Intuit will identify and verify trusted connections. No Fees. Our goal is to support local small businesses.
+    </p>
+
+    <br>
+
+    <p style="font-size:16px; color: #505050;">
+      Interested? Let's keep in touch. We'll update you on our progress and invite you to participate in the Beta.
+      <br>
+
+    </p>
+
+    <%= form_for(@qborentestimate) do |f| %>
+
+        <div class="form-horizontal" style="margin-right:10px;">
+          <!--input type="file" name="qborentestimate[image]"-->
+          <input type="email" name="qborentestimate[email]" placeholder="Email address" style="height: 34px; width: 300px; margin-bottom: 10px;">
+          <button class="btn btn-primary btn-large" type="submit" id="qbocontactMeBtn" style="margin-top: 0px; margin-right: 0px; margin-bottom: 10px; font-family: Trebuchet MS;">
+            Submit
+          </button>
+          <br>
+          <span style="font-size: 14px; color: #999999">  We promise we won't sell your address </span>
+          <br>
+        </div>
+
+    <% end %>
+    <p style="font-size: 14px; color: #999999">
+      Questions or feedback? Send us a note at
+      <a class="btn-link" href="mailto:tradewinz@intuit.com?subject=Feedback about sharing office space">tradewinz@intuit.com</a>
+    </p>
+
+    <p style="font-size:12px; color: #505050; margin-top: 80px; line-height: 15px">
+      * Average assumes that a 150 sq. ft. office is rented in a "shared" office (more than one business sharing space). Actual rent will vary based on factors such as location, amenities, and equipment.
+    </p>
+
+  </div>
+
+</div>
+
+<!--%= render 'form' %-->
