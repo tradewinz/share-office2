@@ -1,53 +1,65 @@
-<div class="container">
+<div class="container-fluid">
 
-  <div class="hero-unit" style="background-color:white; border-style:solid; border-width:2px; border-color: #eeeeee; font-family: Trebuchet MS; padding-bottom: 10px;">
+  <div class="container" style="padding-bottom: 65px;">
 
-    <p style="font-size:20px; color: #333333;">
-      <strong>
-        You can earn an average* of $5000 in annual income by renting your unused space.
-      </strong>
-    </p>
+    <div class="span4">
+      <%= image_tag("thankufloorplan_330x255.png", alt: "Unused Office image", style: "margin-top:20px") %>
+    </div>
 
-    <p style="font-size:16px; color: #505050;">
-      The market rate can be up to 50% higher than the price you pay per square foot.
-    </p>
-    <p style="font-size:16px; color: #505050;">
-      Intuit Labs is developing a solution for our small business community to share space. Intuit will identify and verify trusted connections. No Fees. Our goal is to support local small businesses.
-    </p>
+    <div class="span7">
 
-    <br>
+      <div style="font-family: Trebuchet MS;">
 
-    <p style="font-size:16px; color: #505050;">
-      Interested? Let's keep in touch. We'll update you on our progress and invite you to participate in the Beta.
-      <br>
+        <!--p style="font-size: 30px"></p-->
+        <p style="padding-top: 40px; padding-bottom: 20px; font-size: 34px; color: #505050; border-bottom-style:solid; border-width:2px; border-bottom-color: #eeeeee; ">Great News!</p>
 
-    </p>
+        <p style="padding-top: 10px; font-size: 20px; color: #008d14; line-height: 25px; ">
+          Most businesses in the U.S. rent extra office space for $2.75 per square foot on average.
+          If you've got 150 square feet, that's worth $5000 in annual income.
+        </p>
+        <p style="font-size: 17px; padding-top: 10px;">So why did we ask for your zip code and industry?</p>
+        <p>
+          <strong>THANK YOU</strong> for submitting it!  We're sorry that we don't have a localized estimate – <strong>yet</strong>.
+          We're working hard on it, and plan to have localized estimates, by zip code, very soon.
+          The solution we're building will help small businesses like you find good renters.
+          Intuit will identify and verify business connections.  No Fees.
+          This will be a <strong>free</strong> offering to support local small businesses and give QuickBooks users another benefit for being our valued customers.
+        </p>
 
-    <%= form_for(@qborentestimate) do |f| %>
+        <p>
+          As soon as we're ready we will be happy to send you an accurate estimate based on your zip code.
+          We'd also love to update you on our progress. Simply provide your email address below:
 
-        <div class="form-horizontal" style="margin-right:10px;">
-          <!--input type="file" name="qborentestimate[image]"-->
-          <input type="email" name="qborentestimate[email]" placeholder="Email address" style="height: 34px; width: 300px; margin-bottom: 10px;">
-          <button class="btn btn-primary btn-large" type="submit" id="qbocontactMeBtn" style="margin-top: 0px; margin-right: 0px; margin-bottom: 10px; font-family: Trebuchet MS;">
-            Submit
-          </button>
-          <br>
-          <span style="font-size: 14px; color: #999999">  We promise we won't sell your address </span>
-          <br>
+        </p>
+
+        <br>
+        <div style="padding: 20px 10px 1px 20px; background-color:#3679BD; color: #ffffff; font-family: Trebuchet MS; border-radius: 6px 6px 6px 6px;">
+          <%= form_for(@qborentestimate) do |f| %>
+
+
+              <!--input type="file" name="qborentestimate[image]"-->
+              <input type="email" name="qborentestimate[email]" placeholder="Email address" style="height: 30px; width: 70%; margin-bottom: 10px;">
+              <button class="btn btn-primary btn-large" type="submit" id="qbocontactMeBtn"
+                      style="background: url(/assets/btn_submit_161x41.png) no-repeat; height: 41px; width: 161px;
+                              margin-top: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 10px;">
+              </button>
+              <br>
+              <span style="font-size: 12px;"> We promise this is not a scam to get your email address for evil / marketing purposes.  </span>
+
+
+
+          <% end %>
         </div>
+        <p style="font-size: 12px; color: #999999; padding-top: 10px;">
+          Questions or feedback? Send us a note at
+          <a class="btn-link" href="mailto:tradewinz@intuit.com?subject=Feedback about sharing office space">tradewinz@intuit.com</a>
+        </p>
 
-    <% end %>
-    <p style="font-size: 14px; color: #999999">
-      Questions or feedback? Send us a note at
-      <a class="btn-link" href="mailto:tradewinz@intuit.com?subject=Feedback about sharing office space">tradewinz@intuit.com</a>
-    </p>
+      </div>
 
-    <p style="font-size:12px; color: #505050; margin-top: 80px; line-height: 15px">
-      * Average assumes that a 150 sq. ft. office is rented in a "shared" office (more than one business sharing space). Actual rent will vary based on factors such as location, amenities, and equipment.
-    </p>
+    </div>
 
   </div>
 
 </div>
-
 <!--%= render 'form' %-->

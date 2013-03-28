@@ -2,7 +2,7 @@ class RentestimatesController < ApplicationController
   # GET /rentestimates
   # GET /rentestimates.json
   def index
-    @rentestimates = Rentestimate.all
+    @rentestimates = Rentestimate.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

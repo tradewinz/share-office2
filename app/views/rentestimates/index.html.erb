@@ -1,6 +1,7 @@
 <div class="container">
     <table>
       <tr>
+        <th>Create date</th>
         <th>Tracking ID</th>
         <th>Industry</th>
         <th>Other Industry</th>
@@ -15,6 +16,7 @@
 
         <% @rentestimates.each do |rentestimate| %>
           <tr>
+            <td><%= rentestimate.created_at %></td>
             <td><%= rentestimate.trackingId %></td>
             <td><%= rentestimate.industry %></td>
             <td><%= rentestimate.subindustry %></td>

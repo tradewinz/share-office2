@@ -2,7 +2,7 @@ class QborentestimatesController < ApplicationController
   # GET /qborentestimates
   # GET /qborentestimates.json
   def index
-    @qborentestimates = Qborentestimate.all
+    @qborentestimates = Qborentestimate.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb
