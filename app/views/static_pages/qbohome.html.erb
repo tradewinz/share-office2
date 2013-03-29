@@ -11,15 +11,15 @@
             <div class="hero-unit" style="padding: 20px 40px 40px; background-color:#3679BD; color: #ffffff; font-family: Trebuchet MS">
 
               <!--p style="font-size: 30px"></p-->
-              <h2>Tell me how much rent I'll get for my space</h2>
+              <h2>Make your office pay for itself</h2>
 
-              <!--p style="font-size: 17px">Tell us about your space, and we'll tell you how much it's worth.</p-->
+              <p style="font-size: 17px">See how much rent you could get sharing your excess office space </p>
               <br>
 
               <%= form_for(@qborentestimate) do |f| %>
                 
                 <!--%= f.text_field :industry --> 
-                <select id="qbobusinessType" name="qborentestimate[industry]" style="margin-bottom: 15px;">
+                <select id="qbobusinessType" name="qborentestimate[industry]" style="width: 70%; margin-bottom: 15px;">
                         <option class="ghostText" value="">Select Your Industry</option>
                         <option value="Accounting">Accounting, Bookkeeping  </option>
                         <option value="Advertising">Advertising, Public Relations </option>
@@ -38,9 +38,11 @@
                         <option value="Other">Other Industry</option>
                 </select>                 
                               
-                <input id="qbosubType" type="text" name="qborentestimate[subindustry]" placeholder="Specify your Industry" class="input-large" style="height: 20px; display: none"/>
+                <input id="qbosubType" type="text" name="qborentestimate[subindustry]" placeholder="Specify your Industry"
+                       class="input-large" style="width: 70%; height: 20px; display: none"/>
                 <br>
-                <input type="text" name="qborentestimate[location]" placeholder="Zip Code" class="input-large" style="margin-bottom: 20px;"/>
+                <input type="text" name="qborentestimate[location]" placeholder="Zip Code"
+                       class="input-large" style="width: 70%; margin-bottom: 20px;"/>
                 <br>
 
                 <button class="btn btn-primary btn-large" style="background: url(/assets/btn_get_estimate_161x42.png) no-repeat; height: 42px; width: 161px;" type="submit" id="qbogetEstimateBtn"></button>

@@ -4,6 +4,8 @@
 
     <div class="span4">
       <%= image_tag("thankufloorplan_330x255.png", alt: "Unused Office image", style: "margin-top:20px") %>
+      <hr>
+
     </div>
 
     <div class="span7">
@@ -13,43 +15,48 @@
         <!--p style="font-size: 30px"></p-->
         <p style="padding-top: 40px; padding-bottom: 20px; font-size: 34px; color: #505050; border-bottom-style:solid; border-width:2px; border-bottom-color: #eeeeee; ">Great News!</p>
 
-        <p style="padding-top: 10px; font-size: 20px; color: #008d14; line-height: 25px; ">
+        <p style="padding-top: 10px; font-size: 20px; font-style: italic; color: #008d14; line-height: 25px; ">
           Most businesses in the U.S. rent extra office space for $2.75 per square foot on average.
           If you've got 150 square feet, that's worth $5000 in annual income.
         </p>
-        <p style="font-size: 17px; padding-top: 10px;">So why did we ask for your zip code and industry?</p>
+        <p style="font-size: 17px; font-style: italic; font-weight: bold; padding-top: 10px;">
+          "OK, that’s a national average…what can I get in my area?”
+        </p>
         <p>
-          <strong>THANK YOU</strong> for submitting it!  We're sorry that we don't have a localized estimate – <strong>yet</strong>.
-          We're working hard on it, and plan to have localized estimates, by zip code, very soon.
-          The solution we're building will help small businesses like you find good renters.
-          Intuit will identify and verify business connections.  No Fees.
-          This will be a <strong>free</strong> offering to support local small businesses and give QuickBooks users another benefit for being our valued customers.
+          Thank you for telling us your zip code.
+          Sorry, the localized estimate is not ready – <strong>yet</strong>. We’ll send it to you when it’s done.
+          Ultimately, our goal is to help you generate extra income.
+          The solution we're building will help you find good renters, that Intuit has verified (for free).
         </p>
 
         <p>
-          As soon as we're ready we will be happy to send you an accurate estimate based on your zip code.
-          We'd also love to update you on our progress. Simply provide your email address below:
-
+          Interested? Let’s keep in touch.
         </p>
-
-        <br>
         <div style="padding: 20px 10px 1px 20px; background-color:#3679BD; color: #ffffff; font-family: Trebuchet MS; border-radius: 6px 6px 6px 6px;">
           <%= form_for(@qborentestimate) do |f| %>
 
 
               <!--input type="file" name="qborentestimate[image]"-->
+              <span>Email me at: </span>
               <input type="email" name="qborentestimate[email]" placeholder="Email address" style="height: 30px; width: 70%; margin-bottom: 10px;">
-              <button class="btn btn-primary btn-large" type="submit" id="qbocontactMeBtn"
-                      style="background: url(/assets/btn_submit_161x41.png) no-repeat; height: 41px; width: 161px;
-                              margin-top: 0px; margin-right: 0px; margin-left: 5px; margin-bottom: 10px;">
+              <br><span>I'd consider sharing my space if I made</span>
+              <input type="number" name="qborentestimate[rent]" placeholder="$" style="height: 30px; width: 20%; margin-bottom: 10px;">
+              <span>per year in rent.</span>
+              <br>
+              <button class="btn btn-primary btn-large" type="submit" id="contactMeBtn"
+                      style="background: url(/assets/btn_submit_161x41.png) no-repeat; height: 41px; width: 161px; margin-bottom: 10px;">
               </button>
               <br>
-              <span style="font-size: 12px;"> We promise this is not a scam to get your email address for evil / marketing purposes.  </span>
-
+              <span style="font-size: 12px;">
+                We promise this is not a scam to get your email address for evil / marketing purposes.
+              </span>
 
 
           <% end %>
         </div>
+
+        <br>
+
         <p style="font-size: 12px; color: #999999; padding-top: 10px;">
           Questions or feedback? Send us a note at
           <a class="btn-link" href="mailto:tradewinz@intuit.com?subject=Feedback about sharing office space">tradewinz@intuit.com</a>
