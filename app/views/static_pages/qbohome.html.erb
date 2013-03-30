@@ -13,13 +13,13 @@
               <!--p style="font-size: 30px"></p-->
               <h2>Make your office pay for itself</h2>
 
-              <p style="font-size: 17px">See how much rent you could get sharing your excess office space </p>
+              <p style="font-size: 17px">See how much rent you could get by sharing office space</p>
               <br>
 
               <%= form_for(@qborentestimate) do |f| %>
                 
                 <!--%= f.text_field :industry --> 
-                <select id="qbobusinessType" name="qborentestimate[industry]" style="width: 70%; margin-bottom: 15px;">
+                <select id="qbobusinessType" name="qborentestimate[industry]" style="width: 90%; margin-bottom: 15px;">
                         <option class="ghostText" value="">Select Your Industry</option>
                         <option value="Accounting">Accounting, Bookkeeping  </option>
                         <option value="Advertising">Advertising, Public Relations </option>
@@ -39,10 +39,10 @@
                 </select>                 
                               
                 <input id="qbosubType" type="text" name="qborentestimate[subindustry]" placeholder="Specify your Industry"
-                       class="input-large" style="width: 70%; height: 20px; display: none"/>
+                       class="input-large" style="width: 90%; height: 20px; display: none"/>
                 <br>
                 <input type="text" name="qborentestimate[location]" placeholder="Zip Code"
-                       class="input-large" style="width: 70%; margin-bottom: 20px;"/>
+                       class="input-large" style="width: 90%; margin-bottom: 20px;"/>
                 <br>
 
                 <button class="btn btn-primary btn-large" style="background: url(/assets/btn_get_estimate_161x42.png) no-repeat; height: 42px; width: 161px;" type="submit" id="qbogetEstimateBtn"></button>
