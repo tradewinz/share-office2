@@ -32,3 +32,6 @@ gem "fog", "~> 1.3.1"
 gem "carrierwave"
 
 gem "jquery-validation-rails"
+
+gem 'newrelic_rpm'
+
