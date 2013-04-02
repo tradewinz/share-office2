@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71e8222a-3170-4924-bf84-bc976712e7f6" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/newrelic.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/qborentestimates/index.html.erb" afterPath="$PROJECT_DIR$/app/views/qborentestimates/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/rentestimates/index.html.erb" afterPath="$PROJECT_DIR$/app/views/rentestimates/index.html.erb" />
     </list>
     <ignored path="share_office2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,7 +46,9 @@
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/qbohome.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="29" column="27" selection-start="989" selection-end="2356" vertical-scroll-proportion="-6.269231">
-              <folding />
+              <folding>
+                <marker date="1364587404492" expanded="true" signature="678:3177" placeholder="do ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,7 +80,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newrelic.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="newrelic.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/newrelic.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -87,28 +89,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="development.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="22" column="5" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="image_uploader.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/qborentestimates/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="27" column="108" selection-start="894" selection-end="894" vertical-scroll-proportion="-17.653847">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="carrierwave.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/initializers/carrierwave.rb">
+      <file leaf-file-name="index.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/rentestimates/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="28" column="113" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.68489206">
               <folding />
             </state>
           </provider>
@@ -127,11 +129,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/rentestimates_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/qborentestimates_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/qborentestimates/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/rentestimates/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/rentestimates/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/qborentestimates/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/models/rentestimate.rb" />
@@ -143,6 +142,9 @@
         <option value="$PROJECT_DIR$/app/views/qborentestimates/edit.html.erb" />
         <option value="$PROJECT_DIR$/config.ru" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/views/qborentestimates/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/rentestimates/index.html.erb" />
       </list>
     </option>
   </component>
@@ -155,7 +157,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="57" />
-    <option name="y" value="133" />
+    <option name="y" value="148" />
     <option name="width" value="1545" />
     <option name="height" value="902" />
   </component>
@@ -714,7 +716,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="133" width="1545" height="902" extended-state="0" />
+    <frame x="57" y="148" width="1545" height="902" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -818,28 +820,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/qborentestimates/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="19" selection-start="1060" selection-end="1060" vertical-scroll-proportion="-25.807692">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="28" selection-start="3149" selection-end="3149" vertical-scroll-proportion="-31.384615">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Rakefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
@@ -898,7 +879,9 @@
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/qbohome.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="27" selection-start="989" selection-end="2356" vertical-scroll-proportion="-6.269231">
-          <folding />
+          <folding>
+            <marker date="1364587404492" expanded="true" signature="678:3177" placeholder="do ... end" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -926,6 +909,27 @@
     <entry file="file://$PROJECT_DIR$/config/newrelic.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="5" selection-start="500" selection-end="500" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/qborentestimates/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="108" selection-start="894" selection-end="894" vertical-scroll-proportion="-17.653847">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/rentestimates/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="113" selection-start="1040" selection-end="1040" vertical-scroll-proportion="0.68489206">
           <folding />
         </state>
       </provider>
