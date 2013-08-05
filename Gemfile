@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.11'
 
-#gem 'bootstrap-sass', '2.1'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', '2.3.1.2'
 
 group :development do
-  gem 'sqlite3', '1.3.5'
+  gem 'sqlite3'
+  gem 'faker'
 end
+
+gem 'thin' # get rid of annoying warns
 
 
 # Gems used only for assets and not required
@@ -22,17 +24,23 @@ end
 gem 'jquery-rails', '2.0.2'
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg'
+  gem 'unicorn'
+
 end
 
+gem 'newrelic_rpm', '3.6.4.122'
+
+gem "jquery-validation-rails", '1.11.0'
+
+
+#Photo Gallery
 gem "mini_magick"
 
 gem "fog", "~> 1.3.1"
 
 gem "carrierwave"
 
-gem "jquery-validation-rails"
 
-gem 'newrelic_rpm'
 
 gem 'only inhotfix'
