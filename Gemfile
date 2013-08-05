@@ -35,3 +35,4 @@ gem "jquery-validation-rails"
 
 gem 'newrelic_rpm'
 
+gem thin
