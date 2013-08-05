@@ -25,8 +25,6 @@ gem 'jquery-rails', '2.0.2'
 
 group :production do
   gem 'pg'
-  gem 'unicorn'
-
 end
 
 gem 'newrelic_rpm', '3.6.4.122'
